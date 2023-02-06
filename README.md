@@ -1,24 +1,11 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**⚠️ IMPORTANT:** At now, this project is under development.
 
-Things you may want to cover:
+A website where users can posts about anything, but outsiders can't see the author of a post, only signed users can.
 
-* Ruby version
+Made for the [Members Only Project](https://www.theodinproject.com/lessons/ruby-on-rails-members-only) from The Odin Project.
 
-* System dependencies
+Ruby version: 3.1.2
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rails Version: 7.0.4
