@@ -1,0 +1,7 @@
+<h1>All posts</h1>
+<% @posts.each do |post| %>
+  <div>
+    <h2>Author: <%= user_signed_in? ? post.user.name : 'Anonym' %> </h2>
+    <p><%= post.text %></p>
+  </div>
+<% end %>
