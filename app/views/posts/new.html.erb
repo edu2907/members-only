@@ -1,0 +1,23 @@
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+    <ul>
+      <% @post.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<h2>New Post</h2>
+
+<%= form_with model: @post do |f| %>
+  <div class="field">
+    <%= f.label :text %>
+    <br>
+    <%= f.text_area :text, autofocus: true %>
+  </div>
+  <%= f.submit 'Create' %>
+<% end %>
