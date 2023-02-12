@@ -1,7 +1,24 @@
-<h1>All posts</h1>
-<% @posts.each do |post| %>
+<div class="posts_index">
   <div>
-    <h2>Author: <%= user_signed_in? ? post.user.name : 'Anonym' %> </h2>
-    <p><%= post.text %></p>
+    <div>
+      <% if user_signed_in? %>
+        <span>Hi there,</span>
+        <span><%= current_user.name %></span>
+      </div>
+      <div>
+        <button>+ New Post</button>
+      </div>
+    <% else %>
+      <p>Sign In to create posts like these and view their owners.</p>
+    <% end %>
   </div>
-<% end %>
+  <div>
+    <% @posts.each do |post| %>
+      <div>
+        <p><%= post.text %></p>
+        <h3>Author: <%= user_signed_in? ? post.user.name : 'Anonymous User' %> </h3>
+        <h3>Created at: <%= post.created_at %></h3>
+      </div>
+    <% end %>
+  </div>
+</div>
