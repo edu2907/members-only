@@ -9,12 +9,12 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <header>
+    <header class='layout'>
       <div></div>
       <h1><%= link_to "Members Only", root_path %></h1>
       <div id="right_container">
         <% if user_signed_in? %>
-          <span>Logged as <%= link_to current_user.name, edit_registration_path(current_user) %></span>
+          <span>Logged as <%= link_to current_user.name, edit_registration_path(current_user), class: 'link' %></span>
         <% else %>
           <a href="<%= new_user_session_path %>">
             <div class="button">

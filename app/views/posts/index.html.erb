@@ -1,24 +1,32 @@
 <div class="posts_index">
-  <div>
-    <div>
-      <% if user_signed_in? %>
-        <span>Hi there,</span>
-        <span><%= current_user.name %></span>
-      </div>
+  <header class="posts_header">
+    <% if user_signed_in? %>
       <div>
-        <button>+ New Post</button>
+        <span id="greeting">Hi there,</span>
+        <br>
+        <span id="current_user_name"><%= current_user.name %></span>
       </div>
+      <a href="<%= new_post_path %>">
+        <div class="button">
+          + New Post
+        </div>
+      </a>
     <% else %>
-      <p>Sign In to create posts like these and view their owners.</p>
+      <h2> <%= link_to 'Sign Up', new_user_registration_path, class: 'link' %> to create posts like these <br>
+         and view their owners.</h2>
     <% end %>
-  </div>
-  <div>
-    <% @posts.each do |post| %>
-      <div>
-        <p><%= post.text %></p>
-        <h3>Author: <%= user_signed_in? ? post.user.name : 'Anonymous User' %> </h3>
-        <h3>Created at: <%= post.created_at %></h3>
-      </div>
+  </header>
+  <div class="post-list">
+    <% @posts.sort_by {|p| p.created_at}.reverse.each do |post| %>
+      <section>
+        <div class="left-bar"></div>
+        <div>
+          <p><%= post.text %></p>
+          <span class="metadata">Created at: <%= post.created_at.localtime.to_fs :long %></span>
+          <br>
+          <span class="metadata">By: <%= user_signed_in? ? post.user.name : 'Anonymous User' %> </span>
+        </div>
+      </section>
     <% end %>
   </div>
 </div>

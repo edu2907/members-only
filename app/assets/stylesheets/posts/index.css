@@ -1,0 +1,56 @@
+.posts_index {
+  width: 720px;
+  margin: 50px auto;
+}
+
+header.posts_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+header.posts_header h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24pt;
+}
+
+header.posts_header .button {
+  color: white;
+  padding: 8px 20px;
+  font-size: 16pt;
+}
+
+header.posts_header span {
+  font-weight: bold;
+}
+
+header.posts_header #greeting {
+  font-size: 1rem;
+}
+
+header.posts_header #current_user_name {
+  font-size: 2.5rem;
+}
+
+.post-list section {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.post-list .left-bar {
+  background-color: #FFB920;
+  width: 5px;
+}
+
+.post-list p {
+  max-width: 500px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.post-list .metadata {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
