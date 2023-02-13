@@ -1,0 +1,66 @@
+.new_post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.new_post form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new_post .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.new_post .field label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.new_post .field_with_errors textarea::placeholder {
+  color: #E03A22;
+}
+
+.new_post .field textarea {
+  min-width: 455px;
+  outline: #D9D9D9 solid 2px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 10px;
+  min-height: 177px;
+}
+
+.new_post textarea::placeholder {
+  font-style: italic;
+}
+
+.new_post .field_with_errors textarea {
+  outline: #E03A22 solid 2px;
+}
+
+.new_post .field textarea:focus {
+  outline: #FFB920 solid 2px;
+}
+
+.new_post .button {
+  color: white;
+  padding: 15px 30px;
+  align-self: center;
+}
+
+.new_post .error_explanation {
+  background-color: #E69083;
+  color: #E03A22;
+  border-radius: 15px;
+  min-width: 300px;
+  padding: 20px 20px 20px 15px;
+}
+
+.new_post .error_explanation h2 {
+  font-size: 1.2rem;
+}

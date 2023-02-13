@@ -1,4 +1,4 @@
-<div class="posts_index">
+<main>
   <header class="posts_header">
     <% if user_signed_in? %>
       <div>
@@ -13,7 +13,7 @@
       </a>
     <% else %>
       <h2> <%= link_to 'Sign Up', new_user_registration_path, class: 'link' %> to create posts like these <br>
-         and view their owners.</h2>
+        and view their owners.</h2>
     <% end %>
   </header>
   <div class="post-list">
@@ -21,7 +21,7 @@
       <section>
         <div class="left-bar"></div>
         <div>
-          <p><%= post.text %></p>
+          <p><%= post.text %></p> 
           <span class="metadata">Created at: <%= post.created_at.localtime.to_fs :long %></span>
           <br>
           <span class="metadata">By: <%= user_signed_in? ? post.user.name : 'Anonymous User' %> </span>
@@ -29,4 +29,4 @@
       </section>
     <% end %>
   </div>
-</div>
+</main>

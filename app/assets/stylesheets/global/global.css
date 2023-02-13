@@ -17,11 +17,17 @@ a.link:hover {
   font-weight: 600;
 }
 
-.button:hover {
+.button:hover, .button:focus, .button:active, .button:link {
   outline: #ffb920 solid 2px;
   background-color: #58587ace;
 }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 720px;
+  margin: 0px auto;
+  padding: 50px 20px;
 }

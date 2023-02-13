@@ -1,8 +1,3 @@
-.posts_index {
-  width: 720px;
-  margin: 50px auto;
-}
-
 header.posts_header {
   display: flex;
   justify-content: space-between;
