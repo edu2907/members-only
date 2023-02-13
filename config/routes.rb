@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+  get '/users', to: redirect('/')
+
   resources :posts, only: [:index, :new, :create]
 
   root 'posts#index'
