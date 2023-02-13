@@ -10,6 +10,7 @@ a.link:hover {
 
 .button {
   background-color: #58587A;
+  color: white;
   border-radius: 30px;
   border: none;
   cursor: pointer;
@@ -19,7 +20,7 @@ a.link:hover {
 
 .button:hover, .button:focus, .button:active, .button:link {
   outline: #ffb920 solid 2px;
-  background-color: #58587ace;
+  opacity: 0.8;
 }
 
 html {
@@ -30,4 +31,8 @@ main {
   width: 720px;
   margin: 0px auto;
   padding: 50px 20px;
+}
+
+p {
+  word-break: break-all;
 }

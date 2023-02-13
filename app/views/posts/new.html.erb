@@ -1,6 +1,6 @@
-<main class="new_post">
+<main class="new_post form_page">
   <% if @post.errors.any? %>
-    <div class="error_explanation">
+    <div class="error_explanation" data-turbo-cache="false">
       <h2><%= pluralize(@post.errors.count, "error") %> was found in the form:</h2>
       <ul>
         <% @post.errors.each do |error| %>
@@ -14,6 +14,6 @@
       <%= f.label :text, 'New Post' %>
       <%= f.text_area :text, autofocus: true, placeholder: "Hello World..." %>
     </div>
-    <%= f.submit 'Create', class: 'button' %>  
+    <%= f.submit 'Create', class: 'button' %>
   <% end %>
 </main>

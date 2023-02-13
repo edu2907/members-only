@@ -1,0 +1,12 @@
+.new_user_session .checkbox {
+  align-self: flex-start;
+  margin-bottom: 20px;
+} 
+
+.edit_user_registration {
+  gap: 10px;
+}
+
+.edit_user_registration .cancel {
+  background-color: #E03A22;
+}
