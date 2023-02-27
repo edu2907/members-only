@@ -3,9 +3,11 @@ lock "~> 3.17.2"
 
 set :application, "members-only"
 set :repo_url, "git@github.com:edu2907/members-only.git"
+set :branch, 'main'
+set :rbenv_ruby, '3.1.2'
 
 # Deploy to the user's home directory
-set :deploy_to, "/home/deploy/#{fetch :application}"
+set :deploy_to, "/home/ubuntu/#{fetch :application}"
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 

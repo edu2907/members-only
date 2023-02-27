@@ -1,9 +1,6 @@
 # Load DSL and set up stages
 require "capistrano/setup"
 
-require 'capistrano/rails'
-require 'capistrano/passenger'
-require 'capistrano/rbenv'
 
 # Include default deployment tasks
 require "capistrano/deploy"
@@ -34,7 +31,10 @@ set :rbenv_ruby, '3.2.0'
 #   https://github.com/capistrano/passenger
 #
 # require "capistrano/rvm"
-# require "capistrano/rbenv"
+require 'capistrano/rails'
+require 'capistrano/passenger'
+require 'capistrano/rbenv'
+
 # require "capistrano/chruby"
 # require "capistrano/bundler"
 # require "capistrano/rails/assets"

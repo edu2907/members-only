@@ -23,6 +23,4 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: <%= ENV['PG_DABASE'] %> 
-  username: <%= ENV['PG_USER'] %>
-  password: <%= ENV['PG_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
